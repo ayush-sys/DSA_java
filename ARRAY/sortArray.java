@@ -6,20 +6,16 @@ public class sortArray {
         while(mid <= high){
             if(a[mid] == 0){
                 int temp = a[low];
-                a[low] = a[mid];
-                a[mid] = temp;
-                low++;
-                mid--;
+                a[low++] = a[mid];
+                a[mid++] = temp;
             }
-            else if(a[mid] == 1)
-                mid++;
-            else{
+            else if(a[mid] == 2){
                 int temp = a[mid];
                 a[mid] = a[high];
-                a[high] = temp;
-                high--;
+                a[high--] = temp;
             }
-        }
+            else
+                mid++;
     }
     public static void main(String[] args) {
         int a[] = {0, 2, 1, 2, 0};
