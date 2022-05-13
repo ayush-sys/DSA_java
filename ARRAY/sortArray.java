@@ -16,6 +16,7 @@ public class sortArray {
             }
             else
                 mid++;
+        }
     }
     public static void main(String[] args) {
         int a[] = {0, 2, 1, 2, 0};
