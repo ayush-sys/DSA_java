@@ -1,11 +1,22 @@
 package PRACTICE;
 import java.util.*;
 
+
+// Merge 2 sorted arrays where n1 > n2
+// Time complexity is O(n1*n2)
+// Space complexity is O(1), i.e constant
+
 public class merge2sortedArrs {
 
-
     public static void merge_arrays(int a1[], int n1, int a2[], int n2) {
-        
+        for(int i = 0; i < n1; i++){
+          if(a1[i] > a2[0]){
+               int temp = a1[i];
+               a1[i] = a2[0];
+               a2[0] = temp;
+          }
+          Arrays.sort(a2);
+        }
     }
 
     static void printArray(int arr[])
@@ -14,7 +25,6 @@ public class merge2sortedArrs {
 			System.out.print(arr[i] + " ");
 		System.out.println();
 	}
-
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
